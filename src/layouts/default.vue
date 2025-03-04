@@ -1,5 +1,8 @@
 <template>
-  <v-app-bar :elevation="0">
+  <v-app-bar
+    style="background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(3px)"
+    :elevation="0"
+  >
     <v-container class="d-flex justify-center">
       <v-btn to="/" :active="false">首頁</v-btn>
       <v-menu open-on-hover>
@@ -116,9 +119,9 @@ const logout = async () => {
 const links = computed(() => {
   return [
     { to: '/', text: '首頁' },
-    { to: '/', text: '呼吸器模擬' },
-    { to: '/', text: '小遊戲' },
-    { to: '/', text: '聯絡' },
+    { to: '/simulator_ins', text: '呼吸器模擬' },
+    { to: '/game_ins', text: '小遊戲' },
+    { to: '/contact', text: '聯絡' },
   ]
 })
 </script>
